@@ -36,6 +36,11 @@ const SearchBar = ({hasShadow}) => {
     setActive(button);
   };
 
+  const boxVariant = {
+    visible: { opacity: 1, scale: 2 },
+    hidden: { opacity: 0, scale: 0 },
+  }
+
   return (
     <>
       {/* <div className="flex w-4/6 overflow-hidden rounded-full border border-gray-400 bg-gray-300 shadow-sm hover:shadow-lg md:w-1/2">

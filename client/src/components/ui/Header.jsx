@@ -49,14 +49,14 @@ export const Header = () => {
       >
         <a href="/" className="flex items-center gap-1">
           <img
-            className="h-8 w-8 md:h-10 md:w-10"
-            src="https://cdn-icons-png.flaticon.com/512/2111/2111320.png"
+            className="h-10 w-10 md:h-16 rounded-lg md:w-24"
+            src="./assets/hh2.jpg"
             alt=""
           />
 
-          <span className="hidden text-2xl font-bold text-red-500 lg:block">
+          {/* <span className="hidden text-2xl font-bold text-red-500 lg:block">
             airbnb
-          </span>
+          </span> */}
         </a>
 
 

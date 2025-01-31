@@ -6,6 +6,7 @@ import { PlaceContext } from '@/providers/PlaceProvider';
 
 import { getItemFromLocalStorage, setItemsInLocalStorage, removeItemFromLocalStorage } from '@/utils';
 import axiosInstance from '@/utils/axios';
+import { useNavigate } from 'react-router-dom';
 
 // USER
 export const useAuth = () => {
@@ -169,4 +170,22 @@ export const useProvidePlaces = () => {
         loading,
         setLoading
     }
+}
+
+export const useWishClick = () =>{
+    const [isWishOpen,setIsWishOpen] = useState(false);
+    const navigate = useNavigate();
+    const auth = useAuth();
+
+    const handleWishClick =()=>{
+        if(auth.user){
+            setIsWishOpen(!isWishOpen);
+            console.log(isWishOpen);
+        }
+        else{
+            navigate('/login');
+        }
+    }
+
+    return {isWishOpen,setIsWishOpen,handleWishClick}
 }

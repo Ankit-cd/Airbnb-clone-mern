@@ -1,11 +1,16 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { GoHeartFill } from "react-icons/go";
 import { MdOutlineStar } from "react-icons/md";
-const PlaceCard = ({ place }) => {
+import { useNavigate } from 'react-router-dom';
+import { useAuth } from '../../../hooks/index.js';
+const PlaceCard = ({ place,handleWishClick }) => {
   const { _id: placeId, photos, address, title, price } = place;
+  const auth = useAuth();
+  const [isOpen, setIsOpen] = useState('false');
+  const navigate = useNavigate();
   return (
-    <div className=''>
+    <div className='relative'>
       <Link to={`/place/${placeId}`} className="m-4 flex flex-col md:m-2 xl:m-0">
         <div className="card px-3 mr-2 w-full">
           {photos?.[0] && (
@@ -14,7 +19,6 @@ const PlaceCard = ({ place }) => {
               src={`${photos?.[0]}`}
               className="w-full h-full rounded-xl object-cover"
             />
-            <GoHeartFill className='absolute top-5 right-5 text-xl text-black/50 hover:scale-105 stroke-white stroke-[1.5px]'/>
             </div>
           )}
           <div className='flex justify-between items-baseline pt-3'>
@@ -30,6 +34,7 @@ const PlaceCard = ({ place }) => {
           </div>
         </div>
       </Link>
+      <GoHeartFill onClick={handleWishClick} className='absolute top-9 right-12 xl:top-5 xl:right-10 text-xl text-black/50 hover:scale-105 stroke-white stroke-[1.5px]'/>
     </div>
   );
 };
