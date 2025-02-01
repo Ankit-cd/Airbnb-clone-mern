@@ -1,0 +1,32 @@
+/* Change inactive pagination bullet color */
+.swiper-pagination-bullet {
+    background-color: #cbd5e1; /* Light gray */
+    width: 8px;
+    height: 8px;
+    opacity: 0.7;
+  }
+  
+  /* Change active pagination bullet color */
+  .swiper-pagination-bullet-active {
+    background-color: #ffffff; /* Yellow */
+    width: 10px;
+    height: 10px;
+    opacity: 1;
+  }
+  .swiper-button-next, .swiper-button-prev {
+    background-color: #ffffff;
+    border-radius: 100%;
+    display: flex;
+    opacity: 0;
+    content: icon;
+    align-items: center;
+    width: 25px;
+    height: 25px;
+    color: black;
+    box-shadow: 0 0 5px 5px rgba(0,0,0,0.2);
+  }
+  .swiper-button-next::after, .swiper-button-prev::after {
+    font-size: 8px;  /* Arrow size */
+    font-weight: bold;
+  }
+  

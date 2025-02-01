@@ -39,7 +39,7 @@ export const Header = () => {
   return (
     <header
       className={`sticky top-0 z-10 flex w-full flex-col items-center justify-between gap-7 border-b-[1px] bg-white py-4 ${
-        hasShadow ? `shadow-md` : `${showSearchBar ? 'lg:pb-32 md:pb-40 pb-4 transition-all duration-[0.25s] ease-in-out':'pb-4'}`
+        hasShadow ? `shadow-md` : `${showSearchBar ? 'lg:pb-20 md:pb-40 pb-4 transition-all duration-[0.25s] ease-in-out':'pb-4'}`
       }`}
     >
       <div
@@ -47,16 +47,12 @@ export const Header = () => {
           showSearchBar ? 'relative justify-between px-10' : 'justify-between px-10'
         } w-full max-w-screen-xl`}
       >
-        <a href="/" className="flex items-center gap-1">
+        <a href="/" className="flex items-center">
           <img
-            className="h-10 w-10 md:h-16 rounded-lg md:w-24"
-            src="./assets/hh2.jpg"
+            className="h-10 w-10 md:h-16 rounded-2xl md:w-20"
+            src="./assets/hh1.jpg"
             alt=""
           />
-
-          {/* <span className="hidden text-2xl font-bold text-red-500 lg:block">
-            airbnb
-          </span> */}
         </a>
 
 

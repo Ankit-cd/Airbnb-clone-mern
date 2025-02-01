@@ -135,7 +135,7 @@ const SearchBar = ({hasShadow}) => {
                     <p className='font-semibold'>Who</p>
                     <p className='text-[15px] text-gray-600'>Add Guests</p>
                   </div>
-                  <div className='bg-primary text-white p-3 rounded-full'>
+                  <div className='bg-black text-white p-3 rounded-full'>
                     <IoSearch className='text-xl'/>
                   </div>
                 </div>

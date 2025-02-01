@@ -65,7 +65,7 @@ const LoginPage = () => {
             value={formData.password}
             onChange={handleFormData}
           />
-          <button className="primary my-4">Login</button>
+          <button className="black my-4">Login</button>
         </form>
 
         <div className="mb-4 flex w-full items-center gap-4">

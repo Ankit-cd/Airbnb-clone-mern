@@ -72,7 +72,7 @@ const RegisterPage = () => {
             value={formData.password}
             onChange={handleFormData}
           />
-          <button className="primary my-2">Register</button>
+          <button className="black my-2">Register</button>
         </form>
 
         <div className="mb-4 flex w-full items-center gap-4">

@@ -3,19 +3,25 @@ import Spinner from '@/components/ui/Spinner';
 import PlaceCard from '@/components/ui/PlaceCard';
 import SaveWishlist from '@/components/ui/SaveWishlist';
 import IconSlider from '@/components/ui/IconSlider';
-
+import { TfiPanel } from "react-icons/tfi";
 const IndexPage = () => {
   const allPlaces = usePlaces();
   const { places, loading } = allPlaces;
   const {isWishOpen,setIsWishOpen,handleWishClick} = useWishClick();
 
-  // if (loading) {
-  //   return <Spinner />;
-  // }
+  if (loading) {
+    return <Spinner />;
+  }
 
   return (
     <>
-    {/* <IconSlider/> */}
+    <div className='flex items-center mt-3'>
+      <IconSlider/>
+      <div className='flex gap-4 items-center'>
+        <button className='bg-transparent text-xs font-semibold p-3 border-slate border-[1px] rounded-xl flex items-center justify-center gap-2 hover:bg-gray-200 transition'><TfiPanel className='text-base'/><span>Filters</span></button>
+        <button className='bg-transparent text-xs font-semibold p-3 border-slate border-[1px] rounded-xl flex items-center justify-center hover:bg-gray-200 transition'>Display Total Before taxes</button>
+      </div>
+    </div>
     <div className="relative grid grid-cols-1 justify-items-center py-7 px-14 md:grid-cols-2 md:gap-[25px] lg:grid-cols-3 lg:gap-[4rem] xl:grid-cols-4 xl:gap-10">
       {places.length > 0 ? (
         places.map((place) => <PlaceCard handleWishClick = {handleWishClick} place={place} key={place._id} />)

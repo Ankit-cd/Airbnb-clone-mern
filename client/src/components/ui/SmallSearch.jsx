@@ -32,7 +32,7 @@ const SmallSearch = () => {
         </div>
         <div className="flex items-center gap-3">
           <p className="font-semibold text-gray-500">Add Guests</p>
-          <div className="rounded-full bg-red-500 p-2 text-white">
+          <div className="rounded-full bg-black p-2 text-white">
             <IoSearch className="text-sm" />
           </div>
         </div>

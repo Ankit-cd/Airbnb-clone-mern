@@ -17,7 +17,7 @@ const SaveWishlist = ({handleWishClick}) => {
     <motion.div
         initial={{ scale: 0 ,opacity: 0}}
         animate={{ scale:1,opacity: 1 }}
-        className='bg-white rounded-xl flex flex-col absolute top-2 border-[1px] w-full md:w-[400px] shadow-2xl'>
+        className='bg-white rounded-xl flex flex-col z-50 absolute top-2 border-[1px] w-full md:w-[400px] shadow-2xl'>
         
         <div className='flex items-center gap-28 border-b-[1px] p-3'>
             <RxCross2 onClick={handleWishClick} className='text-xl'/>
@@ -37,7 +37,7 @@ const SaveWishlist = ({handleWishClick}) => {
 
         <div className='flex justify-between mb-3 p-3'>
             <button onClick={() => {setInputValue(""),setCharacter(0)}} className='py-2  px-3 font-semibold rounded-md bg-transparent hover:bg-gray-200'>Clear</button>
-            <button disabled={inputValue===''} onClick={handleCreateWishlist} className={`${character ? ' bg-black text-white':'bg-gray-200 text-gray-500'} py-2 px-3 font-semibold rounded-md`}>Create</button>
+            <button disabled={inputValue===''} onClick={handleCreateWishlist} className={`${character ? ' bg-black text-white':'bg-gray-200 text-gray-500 cursor-not-allowed'} py-2 px-3 font-semibold rounded-md`}>Create</button>
         </div>      
     </motion.div>
   )

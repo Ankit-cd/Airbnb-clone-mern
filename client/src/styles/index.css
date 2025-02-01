@@ -63,8 +63,8 @@ button {
   @apply bg-gray-300;
 }
 
-button.primary {
-  @apply w-full rounded-[10px] bg-primary p-2 text-white;
+button.black {
+  @apply w-full rounded-[10px] bg-black p-2 text-white font-semibold;
 }
 
 button.social {
@@ -73,4 +73,11 @@ button.social {
 
 .card {
   @apply h-[410px] w-[327px] sm:h-[500px] sm:w-[435px] md:h-[400px] md:w-[350px] lg:h-[400px] lg:w-[330px] xl:h-[350px] xl:w-[300px];
+}
+
+
+.card:hover .swiper-button-next,
+.card:hover .swiper-button-prev{
+  opacity: 1;
+  transition: all 0.2s linear;
 }
